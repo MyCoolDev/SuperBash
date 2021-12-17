@@ -1,0 +1,2 @@
+# SuperBash
+Super bash configuration.
