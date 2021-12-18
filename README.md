@@ -17,5 +17,5 @@ source $HOME/.config/bash/init.bash
 
 ### $HOME/.config/bash/init.bash
 ```bash
-source $HOME/.config/bash/profiles/...  # Select your bash profile. BY default green
+source $HOME/.config/bash/profiles/...  # Select your bash profile. By default green
 ```
