@@ -1,8 +1,22 @@
 __git_info() { 
-    if  ! [ -d .git ]; then
+    IFS="/"
+    LocalPath=$(pwd)
+    read -ra LocalPath <<< "$LocalPath"
+    i=0
+    found=0;
+    while [ $i -lt $((${#LocalPath[@]} + 1)) ]
+    do
+        if [ -d "${LocalPath[i]}/.git" ]; then
+            found=1
+            break
+        fi
+        ((i++))
+    done
+    if ! [ $found -eq 0 ]; then
         echo ""
         return 0;
     fi
+    IFS=" "
 
     local aheadN
     local behindN 
