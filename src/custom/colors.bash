@@ -8,7 +8,7 @@ readonly BG_BLACK_COLOR="\e[48;2;40;44;52m"
 
 # MAIN
 
-readonly MAINCOLOR="97;175;239m" # Green: 152;195;121m || Blue: 97;175;239m || Purple: 198;120;221m || Red: 224;108;117m || You can add more...(RGB: R;G;B)
+readonly MAINCOLOR="152;195;121m" # Green: 152;195;121m || Blue: 97;175;239m || Purple: 198;120;221m || Red: 224;108;117m || You can add more...(RGB: R;G;B)
 readonly MAINTEXTCOLOR="\e[38;2;$MAINCOLOR"
 readonly MAINBACKCOLOR="\e[48;2;$MAINCOLOR"
 
