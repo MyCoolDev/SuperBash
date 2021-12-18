@@ -5,7 +5,7 @@ Super bash configuration.
 ```bash
 git clone "https://github.com/MyCoolDev/SuperBash.git"
 cd SuperBash
-! [ -d "$HOME/.config/bash/" ]; mkdir "$HOME/.config/bash/" && cp "src/" "$HOME/.config/\bash/"
+if ! [ -d "$HOME/.config/bash/" ]; mkdir "$HOME/.config/bash/" && cp "src/" "$HOME/.config/\bash/"
 ```
 
 # Configuration
