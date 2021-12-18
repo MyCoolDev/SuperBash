@@ -99,7 +99,7 @@ bash_prompt() {
     icon=""
     localFiles=${localFiles/\/home\/$(whoami)/\~}
 
-    # Coustom paths:
+    # Custom paths:
 
     if [[ $localFiles == "~/Development"* ]] && ! [[ $localFiles == "~/Development/tests"* ]] && ! [[ $localFiles == "~/Development/cpp"* ]] && ! [[ $localFiles == "~/Development/java"* ]] && ! [[ $localFiles == "~/Development/javascript"* ]] && ! [[ $localFiles == "~/Development/python"* ]] && ! [[ $localFiles == "~/.config" ]]; then
         icon=""; localFiles=${localFiles/\~\/Development/Dev}
