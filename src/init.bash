@@ -1,1 +1,1 @@
-source $HOME/.config/bash/profiles/mcvimp1.bash
+source $HOME/.config/bash/profiles/mcvim.bash
