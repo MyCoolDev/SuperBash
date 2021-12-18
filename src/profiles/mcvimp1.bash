@@ -101,9 +101,7 @@ bash_prompt() {
 
     # Custom paths:
 
-    if [[ $localFiles == "~/Development"* ]] && ! [[ $localFiles == "~/Development/tests"* ]] && ! [[ $localFiles == "~/Development/cpp"* ]] && ! [[ $localFiles == "~/Development/java"* ]] && ! [[ $localFiles == "~/Development/javascript"* ]] && ! [[ $localFiles == "~/Development/python"* ]] && ! [[ $localFiles == "~/.config" ]]; then
-        icon=""; localFiles=${localFiles/\~\/Development/Dev}
-    elif [[ $localFiles == "~/Development/tests"* ]]; then
+    if [[ $localFiles == "~/Development/tests"* ]]; then
         icon=""; localFiles=${localFiles/\~\/Development\/tests/Tests}
     elif [[ $localFiles == "/usr"* ]]; then
         icon=""; localFiles=${localFiles/\/usr/User}
@@ -117,6 +115,8 @@ bash_prompt() {
         icon=""; localFiles=${localFiles/\~\/Development\/python/Python}
     elif [[ $localFiles == "~/.config"* ]]; then
         icon=""; localFiles=${localFiles/\~\/\.config/Configuration}
+    elif [[ $localFiles == "~/Development"* ]]; then
+            icon=""; localFiles=${localFiles/\~\/Development/Dev}
     fi
     gitInfo="$(__git_info)"
     gitInfoLan=$?
