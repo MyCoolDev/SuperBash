@@ -2,12 +2,6 @@
 [[ $- != *i* ]] && return
 
 __run() {
-    # Unicode symbols
-    readonly GIT_BRANCH_CHANGED_SYMBOL=''
-    readonly GIT_NEED_PULL_SYMBOL=''
-    readonly GIT_NEED_PUSH_SYMBOL=''
-
-
     bash_prompt() {
         # Check the exit code of the previous command and display different
         # colors in the prompt accordingly.
