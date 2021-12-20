@@ -39,7 +39,7 @@ __run() {
 
         for i in $(seq 2 $spaces)
         do
-            spacestr+=" ‎"
+            spacestr+=" "
         done
 
         ps1string=$(echo "\n $FG_COLOR_01$RESET$BG_COLOR_01$FG_BLACK_COLOR$osIcon $RESET$BG_COLOR_02$FG_COLOR_01$RESET$BG_COLOR_02$FG_BLACK_COLOR $icon $RESET$BG_COLOR_03$FG_COLOR_02$RESET$BG_COLOR_03 $MAINTEXTCOLOR$BOLD$(cat /etc/hostname) at $(whoami) in $localFiles $RESET$FG_COLOR_03$RESET")

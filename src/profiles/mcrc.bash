@@ -37,7 +37,7 @@ __run() {
 
         for i in $(seq 3 $spaces)
         do
-            spacestr+=" ‎"
+            spacestr+=" "
         done
 
         ps1string=$(echo "\n $FG_COLOR_02$RESET$BG_COLOR_02$FG_BLACK_COLOR$BOLD $localFiles $RESET$FG_COLOR_02$RESET")
