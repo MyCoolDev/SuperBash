@@ -40,4 +40,6 @@ edit_path() {
     echo "$localFiles $icon"
     unset edit_path
 }
+
+Im using arch BTW:)
 ```
