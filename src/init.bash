@@ -1,11 +1,7 @@
-init() {
-    source $HOME/.config/bash/custom/colors.bash
-    source $HOME/.config/bash/lib/json.bash
-    config=$(cat $HOME/.config/bash/custom/config.bdb)
-    profile=$(bdbFind PROFILE $config)
-    source $HOME/.config/bash/profiles/$profile.bash
-}
+source $HOME/.config/bash/custom/path.bash
+source $HOME/.config/bash/custom/colors.bash
+source $HOME/.config/bash/share/git-status.bash
 
-init
+source $HOME/.config/bash/profiles/meow.bash
 
-unset init
+source $HOME/.config/bash/commands/init.bash

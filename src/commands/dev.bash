@@ -1,0 +1,3 @@
+dev() {
+  cd "$HOME/developing/$*"
+}

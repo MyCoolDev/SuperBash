@@ -33,7 +33,7 @@ __run() {
         ps1string=" $osIcon   $icon  $(cat /etc/hostname) at $(whoami) in $localFiles "
         DATETEXT="$(date +'%H:%M:%S') "
 
-        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan))
+        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan + 16))
 
         spacestr=""
 
