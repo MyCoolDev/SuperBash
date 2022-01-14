@@ -1,5 +1,4 @@
 init() {
-  source $HOME/.config/bash/custom/path.bash
   source $HOME/.config/bash/custom/colors.bash
   source $HOME/.config/bash/commands/init.bash
   source $HOME/.config/bash/lib/json.bash

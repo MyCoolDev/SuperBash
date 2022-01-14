@@ -31,7 +31,7 @@ __run() {
         ps1string=" $localFiles "
         DATETEXT="$(date +'%H:%M:%S') "
 
-        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan))
+        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan + 8))
 
         spacestr=""
 
