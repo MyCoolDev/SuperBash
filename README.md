@@ -12,7 +12,6 @@ Super bash configuration.
 ```bash
 git clone https://github.com/MyCoolDev/SuperBash
 cd SuperBash
-chmod +x Install # If you got permission error
 ./Install
 ```
 
