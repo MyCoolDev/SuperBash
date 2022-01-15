@@ -16,6 +16,9 @@ Super bash configuration.
 ## Configuration
 
 ### ~/.config/bash/custom/colors.bash
+```bash
+
+```
 
 ### ~/.config/bash/custom/path.bash
 ```bash
