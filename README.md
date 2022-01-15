@@ -21,7 +21,7 @@ chmod +x Install # If you got permission error
 ### ~/.config/bash/custom/colors.bash
 ```bash
 readonly MAINCOLOR="152;195;121m" # just change 152;195;121 this is rgb and don't forget to add m in the end
-# Recommended colors # Green: 152;195;121m || Blue: 97;175;239m || Purple: 198;120;221m || Red: 224;108;117m 
+# Recommended colors # Green: 152;195;121m || Blue: 97;175;239m || Purple: 198;120;221m || Red: 224;108;117m || Yellow: 229;192;123m
 ```
 
 ### ~/.config/bash/custom/path.bash
