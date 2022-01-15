@@ -30,3 +30,4 @@ readonly MAINCOLOR="152;195;121m" # just change 152;195;121 this is rgb and don'
 #   icon="<>"; localFiles="Dev"
 # fi
 ```
+Im using arch btw:)
