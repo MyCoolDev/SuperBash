@@ -15,15 +15,7 @@ Super bash configuration.
 
 ## Configuration
 
-### ~/.bashrc
-```bash
-source $HOME/.config/bash/init.bash
-```
-
-### ~/.config/bash/init.bash
-```bash
-source $HOME/.config/bash/profiles/...  # Select your bash profile. By default green
-```
+### ~/.config/bash/custom/colors.bash
 
 ### ~/.config/bash/custom/path.bash
 ```bash
