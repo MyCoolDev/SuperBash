@@ -14,15 +14,13 @@ __run() {
         fi
 
         localFiles="$(pwd)"
-        icon=""
-        osIcon=$(bdbFind OSICON $(cat $HOME/.config/bash/custom/config.bdb))
         localFiles=${localFiles/\/home\/$(whoami)/\~}
 
         # Custom Path:
-        source $HOME/.config/bash/custom/path.bash
+        source $HOME/.config/bash/custom/path.sh
 
         # Github Status:
-        gitInfo="$(source $HOME/.config/bash/share/git_status.bash)"
+        gitInfo="$(source $HOME/.config/bash/share/git_status.sh)"
         gitInfoLan=$?
 
         # Size:
@@ -30,19 +28,19 @@ __run() {
         readarray -d " " -t str <<< $str
 
         # Calc
-        ps1string=" $osIcon   $icon  $(cat /etc/hostname) at $(whoami) in $localFiles "
+        ps1string=" $localFiles "
         DATETEXT="$(date +'%H:%M:%S') "
 
-        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan + 16))
+        spaces=$((str[1] - ${#ps1string} - ${#DATETEXT} - gitInfoLan + 8))
 
         spacestr=""
 
-        for i in $(seq 2 $spaces)
+        for i in $(seq 3 $spaces)
         do
             spacestr+=" "
         done
 
-        ps1string=$(echo "\n $FG_COLOR_01$RESET$BG_COLOR_01$FG_BLACK_COLOR$osIcon $RESET$BG_COLOR_02$FG_COLOR_01$RESET$BG_COLOR_02$FG_BLACK_COLOR $icon $RESET$BG_COLOR_03$FG_COLOR_02$RESET$BG_COLOR_03 $MAINTEXTCOLOR$BOLD$(cat /etc/hostname) at $(whoami) in $localFiles $RESET$FG_COLOR_03$RESET")
+        ps1string=$(echo "\n $FG_COLOR_02$RESET$BG_COLOR_02$FG_BLACK_COLOR$BOLD $localFiles $RESET$FG_COLOR_02$RESET")
         if ! [ $gitInfoLan -gt 0 ]; then
             DATETEXT="$FG_COLOR_03$BG_COLOR_03$MAINTEXTCOLOR$BOLD $(date +'%H:%M:%S')$RESET$FG_COLOR_03$RESET "
         else

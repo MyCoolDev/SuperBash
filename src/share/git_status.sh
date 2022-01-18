@@ -1,7 +1,11 @@
 # Unicode symbols
+
 readonly GIT_BRANCH_CHANGED_SYMBOL=''
 readonly GIT_NEED_PULL_SYMBOL=''
 readonly GIT_NEED_PUSH_SYMBOL=''
+
+# Code
+
 IFS="/"
 LocalPath=$(pwd)
 read -ra LocalPath <<< "$LocalPath"
