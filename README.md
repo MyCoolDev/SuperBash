@@ -5,7 +5,7 @@ Super bash configuration.
 ![Default Image](https://i.imgur.com/HHZgbAS.png)
 ![Csharp Image](https://i.imgur.com/1FoqtVc.png)
 ##### Easy way to make custom path and custom colors
-![Path](https://imgur.com/QJb85FD)
+![Path](https://i.imgur.com/QJb85FD.png)
 ![Color](https://i.imgur.com/LR3rZfa.png)
 
 ## Installation
