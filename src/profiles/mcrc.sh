@@ -25,7 +25,7 @@ __run() {
         readarray -d "," -t gitInfo <<< "$gitInfo"
 
         if [[ $gitInfoLan != 0 ]]; then
-            if [[ ${gitInfo[2]} == "BLUE" ]]; then
+            if [ ${gitInfo[2]} -eq 5 ]; then
                 gitInfo="$GIT_BLUE_STATUS_SYMBOLS_COLOR\e[0m$GIT_BLUE_STATUS_BACK_COLOR$GIT_STATUS_TEXT_COLOR$BOLD ${gitInfo[0]}${gitInfo[1]} $FG_COLOR_03$RESET"
             else
                 gitInfo="$GIT_RED_STATUS_SYMBOLS_COLOR\e[0m$GIT_RED_STATUS_BACK_COLOR$GIT_STATUS_TEXT_COLOR$BOLD ${gitInfo[0]}${gitInfo[1]} $FG_COLOR_03$RESET"
