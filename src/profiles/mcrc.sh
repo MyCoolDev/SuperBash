@@ -20,7 +20,7 @@ __run() {
         source $HOME/.config/bash/custom/path.sh
 
         # Github Status:
-        gitInfo=$(source $HOME/.config/bash/share/git_status.bash)
+        gitInfo=$(source $HOME/.config/bash/share/git_status.sh)
         gitInfoLan=$?
         readarray -d "," -t gitInfo <<< "$gitInfo"
 
