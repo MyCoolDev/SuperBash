@@ -22,7 +22,7 @@ case $option in
     echo "Installing..."
     mkdir $HOME/.config/bash
     cp -r src/* $HOME/.config/bash
-    echo "source $HOME/.config/bash/init.bash" >> $HOME/.bashrc
+    echo "source $HOME/.config/bash/init.sh" >> $HOME/.bashrc
     echo "Done"
     ;;
   1)
