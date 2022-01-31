@@ -17,7 +17,7 @@ package() {
         git clone "https://aur.archlinux.org/$package.git"
       fi
       cd $package
-      makepkg -i
+      makepkg -i -s
       cd ..
       rm -rf $package
       cd $start
