@@ -9,3 +9,6 @@ init() {
 
 init
 unset init
+
+neofetch
+#make sure you install neofetch
