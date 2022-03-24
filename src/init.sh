@@ -9,3 +9,5 @@ init() {
 
 init
 unset init
+
+colorscript random
