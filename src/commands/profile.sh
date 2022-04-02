@@ -1,5 +1,5 @@
 profile() {
-    if ! [ -f "$HOME/.config/bash/profiles/$1.bash" ]; then
+    if ! [ -f "$HOME/.config/bash/profiles/$1.sh" ]; then
         echo "Can't find profile!"
         return
     fi
