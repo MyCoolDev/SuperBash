@@ -1,5 +1,5 @@
 # SuperBash
-Super bash configuration.
+Super bash configuration
 
 ## Preview
 ![Default Image](https://i.imgur.com/HHZgbAS.png)
