@@ -1,0 +1,3 @@
+update() {
+  sudo pacman -Syu
+}
