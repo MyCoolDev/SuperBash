@@ -2,8 +2,9 @@
 readonly GIT_BRANCH_CHANGED_SYMBOL=''
 readonly GIT_NEED_PULL_SYMBOL=''
 readonly GIT_NEED_PUSH_SYMBOL=''
+IFS="/"
 LocalPath=$(pwd)
-readarray -d "/" -t LocalPath <<< "$LocalPath"
+read -ra LocalPath <<< "$LocalPath"
 i=3
 found=0;
 while [ $i -lt $((${#LocalPath[@]} + 1)) ]
@@ -18,6 +19,7 @@ if ! [ $found -eq 0 ]; then
     echo ""
     return 0;
 fi
+IFS=" "
 
 local aheadN
 local behindN 
@@ -33,8 +35,8 @@ fi
 
 # how many commits local branch is ahead/behind of remote?
 stats="$(git status --porcelain --branch | grep '^##' | grep -o '\[.\+\]$')"
-aheadN="$(echo "$stats" | grep -o 'ahead \d\+' | grep -o '\d\+')"
-behindN="$(echo "$stats" | grep -o 'behind \d\+' | grep -o '\d\+')"
+aheadN="$(echo "$stats" | grep -o 'ahead [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
+behindN="$(echo "$stats" | grep -o 'behind [[:digit:]]\+' | grep -o '[[:digit:]]\+')"
 [ -n "$aheadN" ] && marks+=" $GIT_NEED_PUSH_SYMBOL$aheadN"
 [ -n "$behindN" ] && marks+=" $GIT_NEED_PULL_SYMBOL$behindN"
 
@@ -42,9 +44,10 @@ behindN="$(echo "$stats" | grep -o 'behind \d\+' | grep -o '\d\+')"
 # branch is modified?
 text=" $branch$marks "
 if [ -n "$(git status --porcelain)" ]; then
-    echo "$branch,$marks,RED" # RED STATUS
+    echo "$GIT_RED_STATUS_SYMBOLS_COLOR\e[0m$GIT_RED_STATUS_BACK_COLOR$GIT_STATUS_TEXT_COLOR$BOLD $branch$marks $FG_COLOR_03$RESET" # RED STATUS
     return ${#text}
 else
-    echo "$branch,$marks,BLUE" # BLUE STATUS
+    echo "$GIT_BLUE_STATUS_SYMBOLS_COLOR\e[0m$GIT_BLUE_STATUS_BACK_COLOR$GIT_STATUS_TEXT_COLOR$BOLD $branch$marks $FG_COLOR_03$RESET" # BLUE STATUS
     return ${#text}
 fi
+unset __git_info
