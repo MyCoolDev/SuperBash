@@ -26,11 +26,10 @@ case $option in
     echo "Done"
     ;;
   1)
-    echo "Soon."
-    sleep 0.2
-    echo "Soon.."
-    sleep 0.2
-    echo "Soon..."
+    echo "Updating..."
+    git pull    
+    cp -r -i src/* $HOME/.config/bash
+    echo "Done"
     ;;
   2)
     echo "Soon."
