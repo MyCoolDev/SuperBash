@@ -27,11 +27,8 @@ case $option in
     ;;
   1)
     echo "Updating..."
-    git pull
-    rm -rf $HOME/.config/bash
-    mkdir $HOME/.config/bash
-    cp -r src/* $HOME/.config/bash
-    echo "source $HOME/.config/bash/init.sh" >> $HOME/.bashrc
+    git pull    
+    cp -r -i src/* $HOME/.config/bash
     echo "Done"
     ;;
   2)
